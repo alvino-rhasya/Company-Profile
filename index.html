@@ -232,6 +232,61 @@
     </div>
   </div>
 </section>
+
+<!-- Footer Section -->
+<footer id="footer" class="footer py-4">
+    <div class="container">
+        <div class="row">
+            <!-- Tentang Kami -->
+            <div class="col-lg-3 col-md-6 mb-3">
+                <h5 class="footer-title mb-3">Tentang Valestra</h5>
+                <p class="text-light mb-0 small">
+                    Perusahaan teknologi untuk solusi digital inovatif.
+                </p>
+            </div>
+            
+            <!-- Tautan Cepat -->
+            <div class="col-lg-3 col-md-6 mb-3">
+                <h5 class="footer-title mb-3">Tautan Cepat</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-1"><a href="#hero" class="footer-link">Beranda</a></li>
+                    <li class="mb-1"><a href="#about" class="footer-link">Tentang Kami</a></li>
+                    <li class="mb-1"><a href="#team" class="footer-link">Tim Kami</a></li>
+                    <li class="mb-1"><a href="#services" class="footer-link">Layanan</a></li>
+                    <li class="mb-1"><a href="#contact" class="footer-link">Kontak</a></li>
+                </ul>
+            </div>
+            
+            <!-- Kontak -->
+            <div class="col-lg-3 col-md-6 mb-3">
+                <h5 class="footer-title mb-3">Kontak Kami</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-1 small">
+                        <i class="bi bi-geo-alt-fill me-2 text-primary"></i>
+                        Jl. Teknologi No. 123, Jakarta
+                    </li>
+                    <li class="mb-1 small">
+                        <i class="bi bi-telephone-fill me-2 text-primary"></i>
+                        +62 812-3456-7890
+                    </li>
+                    <li class="mb-1 small">
+                        <i class="bi bi-envelope-fill me-2 text-primary"></i>
+                        valestracompany@gmail.com
+                    </li>
+                </ul>
+            </div>
+        
+        <!-- Hak Cipta -->
+        <hr class="my-3 border-secondary">
+        <div class="row">
+            <div class="col-12 text-center">
+                <p class="text-light mb-0 small">&copy; 2024 Valestra. Semua Hak Dilindungi.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 <script>
 // JavaScript untuk animasi scroll
@@ -247,8 +302,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  // Intersection Observer untuk animasi section
-  const sections = document.querySelectorAll('section');
+  // Intersection Observer untuk animasi section (termasuk footer)
+  const sections = document.querySelectorAll('section, footer');
   
   const observerOptions = {
     threshold: 0.1,
@@ -267,7 +322,7 @@ document.addEventListener('DOMContentLoaded', function() {
     observer.observe(section);
   });
 
-  // Smooth scroll untuk anchor links
+  // Smooth scroll untuk anchor links (termasuk ke footer jika ditambahkan link)
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
